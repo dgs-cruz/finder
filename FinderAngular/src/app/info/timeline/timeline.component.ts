@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {DateAdapter, MAT_DATE_FORMATS} from '@angular/material/core';
+import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { Info } from '../shared/info';
 import { InfoService } from '../info.service';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -8,14 +8,14 @@ import { Filtro } from '../shared/filtro';
 import { AppDateAdapter, APP_DATE_FORMATS } from '../shared/format-datepicker';
 
 @Component({
-  selector: 'app-lista-info',
-  templateUrl: 'lista-info.component.html',
+  selector: 'app-timeline',
+  templateUrl: './timeline.component.html',
   providers: [
-    {provide: DateAdapter, useClass: AppDateAdapter},
-    {provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS}
+    { provide: DateAdapter, useClass: AppDateAdapter },
+    { provide: MAT_DATE_FORMATS, useValue: APP_DATE_FORMATS }
   ]
 })
-export class ListaInfoComponent implements OnInit {
+export class TimelineComponent implements OnInit {
   formFiltro: FormGroup;
 
   constructor(

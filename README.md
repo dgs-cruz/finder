@@ -4,14 +4,18 @@
 
 # Navegação
 
-A home page é bem simples, apenas mostra uma frase a respeito do sistema. No menu superior, clicando em **Find car**, é possível acessar a tabela com os dados disponibilizados pelo sistema, bem como realizar os filtros.
+A home page é bem simples, apenas mostra uma frase a respeito do sistema. No menu superior, clicando em **Find car**, é possível acessar a tabela com os dados disponibilizados pelo sistema, e clicando em **Timeline** é possível acessar a lista de informações sobre as posições dos veículos, contendo data de aproximação do POI, velocidade e status da ignição naquele momento.
 
 # Tecnologias utilizadas
 
 **Back end:** Spring Boot e Java 8
+
 **Banco de Dados:** H2 (Java SQL DataBase)
+
 **Front end:** Angular 11, Angular Material e Bootstrap
-**Web server:** Tom Cat, disponível no próprio Spring Tool Suite.
+
+**Web server:** Tom Cat, disponível no próprio Spring Tool Suite
+
 
 # Como executar
 
@@ -45,3 +49,6 @@ O Data Base H2 é ótimo para desenvolvimento e testes, facilita no ramp up de p
 
 ### Internacionalização
 É necessário configurar melhor o formato das datas, tanto como é apresentado na UI como a forma que é tratado no Front end e no Back end.
+
+### Gerenciamento de estado
+É necessário configurar uma ferramenta de gerenciamento de estado no projeto, por exemplo o Redux, para possibilitar o compartilhamento de informações entre os componentes. A ausência desta ferramenta acaba gerando boilerplate, um exemplo é o formulário de filtro, que precisou ser inserido em dois lugares. Não foi possível modularizar, pois no teste que realizei o formulário funcionou corretamente, a requisição é feita, a response é recebida, porém a tabela ou timeline não se alteram para exibir o novo conjunto de dados.

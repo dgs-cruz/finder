@@ -19,6 +19,10 @@ a.navbar-brand {
     font-weight: 900;
 }
 
+.navbar>.container {
+    justify-content: flex-start !important;
+}
+
 .main-container {
     padding-top: 25px;
     padding-right: 15px;
@@ -84,3 +88,10 @@ a.navbar-brand {
     margin-right: 15px;
 }
 
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 40px;
+    margin: 3px 0;
+}

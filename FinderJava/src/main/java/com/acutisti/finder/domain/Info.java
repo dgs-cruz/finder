@@ -11,17 +11,21 @@ public class Info implements Serializable {
 	private String duration;
 	private Car car;
 	private POI poi;
+	private Integer velocidade;
+	private Boolean ignicao;
 	
 	public Info() {
 	}
-	
-	public Info(Date startDate, Date endDate, String duration, Car car, POI poi) {
+
+	public Info(Date startDate, Date endDate, String duration, Car car, POI poi, Integer velocidade, Boolean ignicao) {
 		super();
 		this.startDate = startDate;
 		this.endDate = endDate;
 		this.duration = duration;
 		this.car = car;
 		this.poi = poi;
+		this.velocidade = velocidade;
+		this.ignicao = ignicao;
 	}
 
 	public Date getStartDate() {
@@ -79,5 +83,21 @@ public class Info implements Serializable {
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
+	}
+
+	public Boolean getIgnicao() {
+		return ignicao;
+	}
+
+	public void setIgnicao(Boolean ignicao) {
+		this.ignicao = ignicao;
+	}
+
+	public Integer getVelocidade() {
+		return velocidade;
+	}
+
+	public void setVelocidade(Integer velocidade) {
+		this.velocidade = velocidade;
 	}
 }

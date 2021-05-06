@@ -1,0 +1,33 @@
+<div class="container main-container">
+    <div class="row text-center">
+        <div class="form-group">
+            <form [formGroup]="formFiltro" (ngSubmit)="onSubmit()" class="form">
+                <span class="form-span">Filtro</span>
+
+                <mat-form-field class="form-fields">
+                    <mat-label>Placa: </mat-label>
+                    <input matInput placeholder="Placa" formControlName="placa">
+                </mat-form-field>
+
+                <mat-form-field class="form-fields">
+                    <mat-label>Período</mat-label>
+                    <mat-date-range-input [formGroup]="formFiltro" [rangePicker]="picker">
+                        <input matStartDate formControlName="startDate" placeholder="Data Inicial">
+                        <input matEndDate formControlName="endDate" placeholder="Data Final">
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+
+                <input type="submit" class="btn btn-primary mt-4 button" value="Filtrar">
+            </form>
+        </div>
+
+        <div class="card" *ngFor="let info of infos">
+            <span>O veículo {{ info.car.placa }} estava no dia {{ info.startDate | date:"dd/MM/yyyy" }} às {{
+                info.startDate | date:"HH'h'mm'm'ss's'" }} a {{ info.velocidade }} km/h na posição ({{ info.poi.latitude
+                }},{{ info.poi.longitude }}) com ignição {{info.ignicao ? "ligada" : "desligada"}}. <a
+                    href="http://maps.google.com/maps?q={{ info.poi.latitude }},{{ info.poi.longitude }}">Maps</a></span>
+        </div>
+    </div>
+</div>

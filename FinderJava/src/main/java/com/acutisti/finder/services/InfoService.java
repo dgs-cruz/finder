@@ -67,6 +67,8 @@ public class InfoService {
 						currentInfo.setStartDate(position.getDate());
 						currentInfo.setCar(car);
 						currentInfo.setPoi(poi);
+						currentInfo.setIgnicao(position.getIgnicao());
+						currentInfo.setVelocidade(position.getVelocidade());
 					}
 					
 					if (near == false && lastNear == true) {

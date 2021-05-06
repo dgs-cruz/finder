@@ -12,5 +12,7 @@ export class Info {
         raio: number;
         latitude: number;
         longitude: number;
-    }
+    };
+    velocidade: number;
+    ignicao: Boolean;
 }
