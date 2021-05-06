@@ -9,9 +9,13 @@ A home page é bem simples, apenas mostra uma frase a respeito do sistema. No me
 # Tecnologias utilizadas
 
 **Back end:** Spring Boot e Java 8
+
 **Banco de Dados:** H2 (Java SQL DataBase)
+
 **Front end:** Angular 11, Angular Material e Bootstrap
+
 **Web server:** Tom Cat, disponível no próprio Spring Tool Suite.
+
 
 # Como executar
 
