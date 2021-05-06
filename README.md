@@ -17,6 +17,7 @@ A home page é bem simples, apenas mostra uma frase a respeito do sistema. No me
 **Web server:** Tom Cat, disponível no próprio Spring Tool Suite
 
 
+
 # Como executar
 
 **Back end:** Importar o projeto no Spring Tool Suite como Projeto Maven, aguardar o download das dependências, e por fim clicar com o botão direito do mouse no arquivo **FinderApplication.java** -> Run As -> Spring Boot App.
